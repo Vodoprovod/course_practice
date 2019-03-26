@@ -1,9 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import App from './app';
 
-export default (
-    <Route component={ App } path={ App.path } >
+// import { HomePage, HomeRoutes } from './pages/home/index';
 
-    </Route>
+
+export default (
+    <Switch>
+        <Route component={ App } path={ App.path } />
+    </Switch>
 );
+
+// <Redirect from='*' to={ App.path } />
