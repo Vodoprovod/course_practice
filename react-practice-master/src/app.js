@@ -5,6 +5,7 @@ import { DevTools } from './utils/index';
 
 import { HomePage, HomeRoutes } from './pages/home/index';
 import { ContactPage, ContactRoutes } from './pages/contact/index';
+import ErrorPage from './pages/error/index';
 
 export default class App extends React.Component {
     static path = '/';
@@ -17,6 +18,7 @@ export default class App extends React.Component {
                 <Switch>
                     <Route component={ HomePage } exact path={ HomePage.path } />
                     <Route component={ ContactPage } path={ ContactPage.path } />
+                    <Route component={ ErrorPage } path='*' />
                 </Switch>
                 { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
             </div>
