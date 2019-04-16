@@ -70,6 +70,14 @@ module.exports = {
 
             },
             {
+                test: /\.less$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'less-loader' }
+                ]
+            },
+            {
                 test: /\.(png|jpg|svg|gif)$/,
                 use: { loader: 'file?name=img/[path][name].[ext]' }
             },

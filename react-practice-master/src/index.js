@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store';
 import routes from './routes';
 
+// import 'fontawesome/css/font-awesome.min.css';
+
 
 const store = configureStore();
 
