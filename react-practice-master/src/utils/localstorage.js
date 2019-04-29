@@ -14,19 +14,24 @@ export default class LS {
         return undefined;
     }
 
-    static set(field, data = {}) {
+    static set(field, data = []) {
         let dataToStorage = {};
+
+        // if (!LS._isExists()) {
+        //     localStorage.setItem(config.localStorage.name, JSON.stringify([]));
+        //     return;
+        // }
 
         if (field) {
             dataToStorage = LS.get();
             if (!dataToStorage) dataToStorage = {};
-            dataToStorage[ field ] = data;
-
+            dataToStorage[field] = data;
         } else {
             dataToStorage = data;
         }
 
         localStorage.setItem(config.localStorage.name, JSON.stringify(dataToStorage));
+
     }
 
     static _isExists() {

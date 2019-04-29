@@ -8,7 +8,7 @@ import routes from './routes';
 // import 'fontawesome/css/font-awesome.min.css';
 
 
-const store = configureStore();
+export const store = configureStore();
 
 
 ReactDOM.render((
